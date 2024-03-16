@@ -16,8 +16,9 @@ ARG FIG2DEV=fig2dev
 ARG JRE=default-jre-headless
 
 # hadolint ignore=DL3008
-RUN apt-get update && apt-get install --no-install-recommends -y \
-  texlive texlive-latex-base \
+RUN apt-get update && \
+  apt-get install -y texlive && \
+  apt-get install --no-install-recommends -y \
   # some auxiliary tools
   "$WGET" \
   "$GIT" \
