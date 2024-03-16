@@ -58,13 +58,7 @@ package.
 
 If you need more TeX Live packages, you have the following options:
 - use version 1 of this docker image (i.e. leplusorg/latex:1).
-- install texlive-full at runtime before running the latex command
-that you need:
-
-```batch
-docker run --rm -t --net=none -v "%cd%:/tmp" leplusorg/latex sh -c "apt-get update && apt-get install --no-install-recommends -y texlive-full && latexmk -outdir=/tmp -pdf /tmp/foo.tex"
-```
-
+- use the image this fork is based on (i.e. aergus/latex).
 
 ## Request new tool
 
