@@ -7,7 +7,6 @@ ARG USER_GECOS=LaTeX
 
 # hadolint ignore=DL3008
 RUN apt-get update && \
-  apt-get autoremove -y && \
   apt-get install --install-suggests -y texlive texlive-extra-utils && \
   adduser && \
   # Removing documentation packages *after* installing them is kind of hacky,
