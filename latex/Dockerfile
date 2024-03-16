@@ -17,7 +17,7 @@ ARG JRE=default-jre-headless
 
 # hadolint ignore=DL3008
 RUN apt-get update && \
-  apt-get install -y texlive texlive-lang-all && \
+  apt-get install -y texlive texlive-extra-utils texlive-lang-all && \
   apt-get install --no-install-recommends -y \
   # some auxiliary tools
   "$WGET" \
