@@ -46,14 +46,14 @@ docker run --rm --net=none leplusorg/latex latexmk -h
 ## texlive vs texlive-full
 
 Version 1 of this image was using the
-[texlive-full](https://packages.ubuntu.com/search?keywords=texlive-full&searchon=names&exact=1&suite=all&section=all)
-Ubuntu package to include as much TeX Live packages pre-installed as
+[texlive-full](https://packages.debian.org/search?keywords=texlive-full&searchon=names&exact=1&suite=all&section=all)
+debian package to include as much TeX Live packages pre-installed as
 possible. But the resulting docker image was over 4 GB making it slow
 to download and breaking some CI/CD disk limits (including the free
 tier of GitHub Actions that I use). To keep the image usable by as many
 people as possible, I decided with version 2 and above to switch
 to the default
-[texlive](https://packages.ubuntu.com/search?keywords=texlive&searchon=names&exact=1&suite=all&section=all)
+[texlive](https://packages.debian.org/search?keywords=texlive&searchon=names&exact=1&suite=all&section=all)
 package.
 
 If you need more TeX Live packages, you have the following options:
