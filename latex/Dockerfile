@@ -7,8 +7,7 @@ ARG USER_GECOS=LaTeX
 
 # hadolint ignore=DL3008
 RUN apt-get update && \
-  apt-get install --no-install-recommends -y chktex ghostscript lacheck latexmk texlive && \
-  adduser && \
+  apt-get install --no-install-recommends -y adduser chktex ghostscript lacheck latexmk texlive && \
   # Removing documentation packages *after* installing them is kind of hacky,
   # but it only adds some overhead while building the image.
   apt-get --purge remove -y .\*-doc$ && \
