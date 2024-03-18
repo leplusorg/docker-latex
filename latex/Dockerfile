@@ -7,7 +7,7 @@ ARG USER_GECOS=LaTeX
 
 # hadolint ignore=DL3008
 RUN apt-get update && \
-  apt-get install --install-suggests -y texlive texlive-extra-utils && \
+  apt-get install --no-install-recommends -y chktex ghostscript lacheck latexmk texlive && \
   adduser && \
   # Removing documentation packages *after* installing them is kind of hacky,
   # but it only adds some overhead while building the image.
@@ -17,8 +17,8 @@ RUN apt-get update && \
   rm -rf /var/lib/apt/lists/*
 
 RUN adduser \
-  --home "$USER_HOME" \
-  --uid $USER_ID \
-  --gecos "$USER_GECOS" \
+  --home "${USER_HOME}" \
+  --uid "${USER_ID}" \
+  --gecos "${USER_GECOS}" \
   --disabled-password \
-  "$USER_NAME"
+  "${USER_NAME}"
