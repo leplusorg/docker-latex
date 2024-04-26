@@ -30,7 +30,7 @@ jobs:
             type=ref,event=pr
             type=sha
       - uses: docker/login-action@e92390c5fb421da1463c202d546fed0ec5c39f20 # v3.1.0
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/alpine'
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
@@ -39,7 +39,7 @@ jobs:
           context: ${{ env.IMAGE }}
           platforms: linux/amd64,linux/arm64
           pull: true
-          push: ${{ github.ref == 'refs/heads/main' }}
+          push: ${{ github.ref == 'refs/heads/alpine' }}
           sbom: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
@@ -47,7 +47,7 @@ jobs:
         working-directory: ${{ env.IMAGE }}
         run: docker compose -f docker-compose.test.yml run sut
       - name: Set VERSION
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/alpine'
         run: |
           # shellcheck disable=SC2086
           VERSION="$(\grep ${IMAGE}/Dockerfile -e '^FROM' | \head -n 1 | \sed -e 's/@.*$//; s/^.*://;')"

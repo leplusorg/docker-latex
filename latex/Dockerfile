@@ -1,4 +1,4 @@
-FROM debian:12.5-slim@sha256:155280b00ee0133250f7159b567a07d7cd03b1645714c3a7458b2287b0ca83cb
+FROM alpine:3.19.1@sha256:c5b1261d6d3e43071626931fc004f70149baeba2c8ec672bd4f27761f8e1ad6b
 
 HEALTHCHECK NONE
 
@@ -9,15 +9,9 @@ ARG USER_HOME=/home/latex
 ARG USER_ID=1000
 ARG USER_GECOS=LaTeX
 
-# hadolint ignore=DL3008
-RUN apt-get update && \
-  apt-get install --no-install-recommends -y adduser chktex ghostscript lacheck latexmk latex-make latex-mk texlive texlive-lang-all texlive-latex-extra && \
-  # Removing documentation packages *after* installing them is kind of hacky,
-  # but it only adds some overhead while building the image.
-  apt-get --purge remove -y .\*-doc$ && \
-  # Remove more unnecessary stuff
-  apt-get clean -y && \
-  rm -rf /var/lib/apt/lists/*
+# hadolint ignore=DL3018
+RUN apk --update --no-cache add texlive-full \
+    && rm -rf /var/cache/apk/*
 
 RUN adduser \
   --home "${USER_HOME}" \
