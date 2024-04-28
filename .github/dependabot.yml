@@ -3,9 +3,21 @@ version: 2
 updates:
   - package-ecosystem: "docker"
     directory: "/latex"
+    target-branch: "main"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "docker"
+    directory: "/latex"
+    target-branch: "alpine"
     schedule:
       interval: "daily"
   - package-ecosystem: "github-actions"
+    target-branch: "main"
+    directory: "/"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "github-actions"
+    target-branch: "alpine"
     directory: "/"
     schedule:
       interval: "daily"
