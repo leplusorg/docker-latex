@@ -57,8 +57,8 @@ package.
 
 If you need more TeX Live packages, you have the following options:
 
-- use version 1 of this docker image.
-- use the image this fork is based on (i.e. aergus/latex).
+- use version 1 of this docker image (i.e. `leplusorg/latex:1.0.0@sha256:af368a8fda9fea612eb5f54025e0c0735c4d4a3ff67b0853e9e8a804a6a24d64`).
+- use the image this fork is based on (i.e. `aergus/latex:latest`).
 
 ## Request new tool
 
