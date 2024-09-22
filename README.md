@@ -58,7 +58,7 @@ package.
 If you need more TeX Live packages, you have the following options:
 
 - use version 1 of this docker image.
-- use the image this fork is based on (e.g. aergus/latex).
+- use the image this fork is based on (i.e. aergus/latex).
 
 ## Request new tool
 
