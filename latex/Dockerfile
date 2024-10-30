@@ -20,7 +20,7 @@ RUN adduser \
   --disabled-password \
   "${USER_NAME}"
 
-ENV HOME "${USER_HOME}"
+ENV HOME="${USER_HOME}"
 
 USER "${USER_NAME}"
 
