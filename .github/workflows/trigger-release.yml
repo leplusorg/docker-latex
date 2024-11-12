@@ -23,7 +23,7 @@ jobs:
         run: |
           # shellcheck disable=SC2086
           VERSION="$(\grep ${IMAGE}/Dockerfile -e '^FROM' | \head -n 1 | \sed -e 's/@.*$//; s/^.*://;')"
-          if [[ "${VERSION}" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]] ; then
+          if [[ "${VERSION}" =~ ^[0-9]+\.[0-9]+$ ]] ; then
             \echo "VERSION=${VERSION}" >> "${GITHUB_ENV}"
           fi
       - name: Check if release already exists
