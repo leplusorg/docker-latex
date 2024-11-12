@@ -60,6 +60,23 @@ If you need more TeX Live packages, you have the following options:
 - use version 1 of this docker image (i.e. `leplusorg/latex:1.0.0@sha256:af368a8fda9fea612eb5f54025e0c0735c4d4a3ff67b0853e9e8a804a6a24d64`).
 - use the image this fork is based on (i.e. `aergus/latex:latest`).
 
+## Debian vs Alpine
+
+By default this containers are based on the Debian Linux distribution
+and follow the same release cycle as the parent
+[debian docker images](https://hub.docker.com/_/debian). But there is
+also an Alpine Linux variant of these images for people who prefer
+smaller images. The images are tagged with prefix `alpine` and follow
+the same release cycle as the parent
+[alpine docker images](https://hub.docker.com/_/alpine). Note that
+although the risk might be low, Alpine Linux is using an alternative
+implementation of C standard library called Musl which is smaller but
+might behave differently from the more widely used GNU C
+library. Hopefully Alpine's TeX package maintainers are thoroughly
+testing the ports but if you encounter any weird behavior with the
+`alpine` variant, we recommend trying the latest `debian` variant to
+see if the issue persists.
+
 ## Request new tool
 
 Please use [this link](https://github.com/leplusorg/docker-latex/issues/new?assignees=thomasleplus&labels=enhancement&template=feature_request.md&title=%5BFEAT%5D) (GitHub account required) to request that a new tool be added to the image. I am always interested in adding new capabilities to these images.
