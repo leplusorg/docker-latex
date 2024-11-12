@@ -62,7 +62,7 @@ If you need more TeX Live packages, you have the following options:
 
 ## Debian vs Alpine
 
-By default this containers are based on the Debian Linux distribution
+By default these images are based on the Debian Linux distribution
 and follow the same release cycle as the parent
 [debian docker images](https://hub.docker.com/_/debian). But there is
 also an Alpine Linux variant of these images for people who prefer
@@ -70,8 +70,8 @@ smaller images. The images are tagged with prefix `alpine` and follow
 the same release cycle as the parent
 [alpine docker images](https://hub.docker.com/_/alpine). Note that
 although the risk might be low, Alpine Linux is using an alternative
-implementation of C standard library called Musl which is smaller but
-might behave differently from the more widely used GNU C
+implementation of C the standard library called Musl which is smaller
+but might behave differently from the more widely used GNU C
 library. Hopefully Alpine's TeX package maintainers are thoroughly
 testing the ports but if you encounter any weird behavior with the
 `alpine` variant, we recommend trying the latest `debian` variant to
