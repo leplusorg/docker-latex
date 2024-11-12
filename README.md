@@ -70,7 +70,7 @@ smaller images. The images are tagged with prefix `alpine` and follow
 the same release cycle as the parent
 [alpine docker images](https://hub.docker.com/_/alpine). Note that
 although the risk might be low, Alpine Linux is using an alternative
-implementation of C the standard library called Musl which is smaller
+implementation of the C standard library called Musl which is smaller
 but might behave differently from the more widely used GNU C
 library. Hopefully Alpine's TeX package maintainers are thoroughly
 testing the ports but if you encounter any weird behavior with the
