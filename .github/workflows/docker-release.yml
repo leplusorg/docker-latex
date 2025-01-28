@@ -25,9 +25,9 @@ jobs:
             type=schedule
             type=ref,event=branch
             type=ref,event=pr
-            type=semver,pattern={{version}}-{{branch}}
-            type=semver,pattern={{major}}.{{minor}}-{{branch}}
-            type=semver,pattern={{major}}-{{branch}}
+            type=semver,pattern={{version}}-alpine
+            type=semver,pattern={{major}}.{{minor}}-alpine
+            type=semver,pattern={{major}}-alpine
             type=sha
       - uses: docker/login-action@9780b0c442fbb1117ed29e0efdff1e18412f7567 # v3.3.0
         with:
