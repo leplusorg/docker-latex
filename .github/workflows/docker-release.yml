@@ -26,6 +26,7 @@ jobs:
             type=ref,event=branch
             type=ref,event=pr
             type=semver,pattern={{version}}-debian
+            type=semver,pattern={{major}}.{{minor}}-debian
             type=semver,pattern={{major}}-debian
             type=sha
       - uses: docker/login-action@9780b0c442fbb1117ed29e0efdff1e18412f7567 # v3.3.0
