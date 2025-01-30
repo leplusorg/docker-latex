@@ -1,7 +1,5 @@
 # LaTeX
 
-![LaTeX Logo](/latex.png)
-
 A convenient way to run LaTeX on various platform using Docker (latexmk, pdflatex...).
 
 [![Dockerfile](https://img.shields.io/badge/GitHub-Dockerfile-blue)](https://github.com/leplusorg/docker-latex/blob/main/latex/Dockerfile)
