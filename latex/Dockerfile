@@ -9,10 +9,18 @@ ARG USER_HOME=/home/latex
 ARG USER_ID=1000
 ARG USER_GECOS=LaTeX
 
-SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
+SHELL ["/bin/ash", "-euo", "pipefail", "-c"]
 
-# hadolint ignore=DL3018
-RUN apk --update --no-cache add texlive-full \
+# hadolint ignore=DL3019
+RUN apk -U upgrade \
+    && apk add \
+    py3-pip=24.3.1-r0 \
+    python3=3.12.9-r0 \
+    texlive-full=20240210.69778-r8 \
+    && if apk -u list | grep -q -e . ; then \
+      apk -u list ; \
+      exit 1 ; \
+    fi \
     && rm -rf /var/cache/apk/*
 
 RUN adduser \
