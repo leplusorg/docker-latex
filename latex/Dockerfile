@@ -9,7 +9,7 @@ ARG USER_HOME=/home/latex
 ARG USER_ID=1000
 ARG USER_GECOS=LaTeX
 
-SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # hadolint ignore=DL3008
 RUN apt-get update \
