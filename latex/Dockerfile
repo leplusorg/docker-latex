@@ -28,7 +28,7 @@ RUN apt-get update \
   texlive-latex-extra=2022.20230122-4 \
   texlive-science=2022.20230122-4 \
   texlive=2022.20230122-3 \
-  && if apt-get -s upgrade | grep -q -e '^Inst ' || true ; then \
+  && if apt-get -s upgrade | grep -q -e '^Inst ' ; then \
      apt-get -s upgrade | grep -e '^Inst ' ; \
      exit 1 ; \
   fi \
