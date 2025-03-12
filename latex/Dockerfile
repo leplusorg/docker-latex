@@ -9,6 +9,8 @@ ARG USER_HOME=/home/latex
 ARG USER_ID=1000
 ARG USER_GECOS=LaTeX
 
+SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
+
 # hadolint ignore=DL3018
 RUN apk --update --no-cache add texlive-full \
     && rm -rf /var/cache/apk/*
