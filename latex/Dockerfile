@@ -11,6 +11,8 @@ ARG USER_GECOS=LaTeX
 
 SHELL ["/bin/bash", "-euo", "pipefail", "-c"]
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get install --no-install-recommends -y \
@@ -39,7 +41,7 @@ RUN apt-get update \
     && apt-get --purge remove -y .\*-doc$ \
     # Remove more unnecessary stuff
     && apt-get clean -y \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* /var/log/* /var/cache/ldconfig/aux-cache
 
 RUN adduser \
   --home "${USER_HOME}" \
