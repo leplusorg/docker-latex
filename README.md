@@ -65,10 +65,11 @@ If you need more TeX Live packages, you have the following options:
 By default these images are based on the Debian Linux distribution
 and follow the same release cycle as the parent
 [debian docker images](https://hub.docker.com/_/debian). These image
-versions are tagged with sufffix `-debian` (except for the `latest`
-tag). But there is also an Alpine Linux variant of these images for
-people who prefer smaller images. These image versions are tagged with
-sufffix `-alpine` and follow the same release cycle as the parent
+versions are tagged with sufffix `...-debian` including
+`latest-debian` (same as `latest`). But there is also an Alpine Linux
+variant of these images for people who prefer smaller images. These
+image versions are tagged with sufffix `...-alpine` including
+`latest-alpine`. They follow the same release cycle as the parent
 [alpine docker images](https://hub.docker.com/_/alpine). Note that
 although the risk might be low, Alpine Linux is using an alternative
 implementation of the C standard library called Musl which is smaller
