@@ -30,10 +30,13 @@ jobs:
             type=schedule
             type=ref,event=branch
             type=ref,event=pr
-            type=semver,pattern={{version}}-alpine
-            type=semver,pattern={{major}}.{{minor}}-alpine
-            type=semver,pattern={{major}}-alpine
+            type=semver,pattern={{version}},suffix=-{{branch}}
+            type=semver,pattern={{major}}.{{minor}},suffix=-{{branch}}
+            type=semver,pattern={{major}},suffix=-{{branch}}
             type=sha
+	    # set latest tag for main branch only
+            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'main') }}
+            type=raw,value=latest,suffix=-{{branch}}
       - uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
