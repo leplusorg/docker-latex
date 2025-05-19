@@ -39,7 +39,7 @@ jobs:
         shell: bash
         run: docker compose -f docker-compose.test.yml run sut
       - uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/alpine'
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
@@ -52,3 +52,20 @@ jobs:
           sbom: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+      - name: Install cosign
+        if: github.ref == 'refs/heads/alpine'
+        uses: sigstore/cosign-installer@3454372f43399081ed03b604cb2d021dabca52bb # v3.8.2
+      - name: Sign the Docker image
+        if: github.ref == 'refs/heads/alpine'
+        working-directory: ${{ env.IMAGE }}
+        env:
+          DIGEST: ${{ steps.build.outputs.digest }}
+          TAGS: ${{ steps.meta.outputs.tags }}
+        shell: bash
+        run: |
+          images=""
+          for tag in ${TAGS}; do
+            images+="${tag}@${DIGEST} "
+          done
+          # shellcheck disable=SC2086
+          cosign sign --recursive --yes ${images}

@@ -8,9 +8,9 @@ name: MSDO
 
 on:
   push:
-    branches: ["main"]
+    branches: ["alpine"]
   pull_request:
-    branches: ["main"]
+    branches: ["alpine"]
   schedule:
     - cron: "0 0 * * 0"
 
