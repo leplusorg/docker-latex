@@ -14,11 +14,11 @@ SHELL ["/bin/ash", "-euo", "pipefail", "-c"]
 # hadolint ignore=DL3019
 RUN apk -U upgrade \
     && apk add \
-    git=2.47.2-r0 \
-    make=4.4.1-r2 \
-    py3-pip=24.3.1-r0 \
+    git=2.49.0-r0 \
+    make=4.4.1-r3 \
+    py3-pip=25.1.1-r0 \
     python3=3.12.10-r1 \
-    texlive-full=20240210.69778-r8 \
+    texlive-full=20240210.69778-r10 \
     && if apk -u list | grep -q -e . ; then \
       apk -u list ; \
       exit 1 ; \
