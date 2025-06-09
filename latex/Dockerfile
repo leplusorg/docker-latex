@@ -19,7 +19,9 @@ RUN apt-get update \
     adduser=3.134 \
     biber=2.18-1 \
     chktex=1.7.8-1 \
+    curl=8.14.1-r0 \
     ghostscript=10.0.0~dfsg-11+deb12u7 \
+    git=2.49.0-r0 \
     lacheck=1.26-17 \
     latex-make=2.4.3-1 \
     latex-mk=2.1-3 \
