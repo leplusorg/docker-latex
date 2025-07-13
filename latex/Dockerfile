@@ -16,7 +16,7 @@ RUN apk -U upgrade \
     && apk add \
     coreutils=9.7-r1 \
     curl=8.14.1-r1 \
-    git=2.49.0-r0 \
+    git=2.49.1-r0 \
     make=4.4.1-r3 \
     py3-pip=25.1.1-r0 \
     python3=3.12.11-r0 \
