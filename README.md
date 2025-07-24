@@ -1,6 +1,6 @@
 # LaTeX
 
-A convenient way to run LaTeX on various platform using Docker (latexmk, pdflatex...).
+A convenient way to run LaTeX on various platform using Docker (`latexmk`, `pdflatex`...).
 
 [![Dockerfile](https://img.shields.io/badge/GitHub-Dockerfile-blue)](latex/Dockerfile)
 [![Docker Build](https://github.com/leplusorg/docker-latex/workflows/Docker/badge.svg)](https://github.com/leplusorg/docker-latex/actions?query=workflow:"Docker")
