@@ -6,18 +6,34 @@ updates:
     target-branch: "main"
     schedule:
       interval: "daily"
+    cooldown:
+      default-days: 7
+    commit-message:
+      prefix: chore(dev-deps)
   - package-ecosystem: "docker"
     directory: "/latex"
     target-branch: "alpine"
     schedule:
       interval: "daily"
+    cooldown:
+      default-days: 7
+    commit-message:
+      prefix: chore(dev-deps)
   - package-ecosystem: "github-actions"
     target-branch: "main"
     directory: "/"
     schedule:
       interval: "daily"
+    cooldown:
+      default-days: 7
+    commit-message:
+      prefix: chore(ci-deps)
   - package-ecosystem: "github-actions"
     target-branch: "alpine"
     directory: "/"
     schedule:
       interval: "daily"
+    cooldown:
+      default-days: 7
+    commit-message:
+      prefix: chore(ci-deps)
