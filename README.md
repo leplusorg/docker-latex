@@ -47,7 +47,7 @@ docker run --rm --net=none leplusorg/latex latexmk -h
 Version 1 of this image was using the
 [texlive-full](https://packages.debian.org/search?keywords=texlive-full&searchon=names&exact=1&suite=all&section=all)
 debian package to include as much TeX Live packages pre-installed as
-possible. But the resulting docker image was over 4 GB making it slow
+possible. But the resulting Docker image was over 4 GB making it slow
 to download and breaking some CI/CD disk limits (including the free
 tier of GitHub Actions that I use). To keep the image usable by as many
 people as possible, I decided with version 2 and above to switch
@@ -57,20 +57,20 @@ package.
 
 If you need more TeX Live packages, you have the following options:
 
-- use version 1 of this docker image (i.e. `leplusorg/latex:1.0.0@sha256:af368a8fda9fea612eb5f54025e0c0735c4d4a3ff67b0853e9e8a804a6a24d64`).
+- use version 1 of this Docker image (i.e. `leplusorg/latex:1.0.0@sha256:af368a8fda9fea612eb5f54025e0c0735c4d4a3ff67b0853e9e8a804a6a24d64`).
 - use the image this fork is based on (i.e. `aergus/latex:latest`).
 
 ## Debian vs Alpine
 
 By default these images are based on the Debian Linux distribution
 and follow the same release cycle as the parent
-[debian docker images](https://hub.docker.com/_/debian). These image
+[debian Docker images](https://hub.docker.com/_/debian). These image
 versions are tagged with sufffix `...-debian` including
 `latest-debian` (same as `latest`). But there is also an Alpine Linux
 variant of these images for people who prefer smaller images. These
 image versions are tagged with sufffix `...-alpine` including
 `latest-alpine`. They follow the same release cycle as the parent
-[alpine docker images](https://hub.docker.com/_/alpine). Note that
+[alpine Docker images](https://hub.docker.com/_/alpine). Note that
 although the risk might be low, Alpine Linux is using an alternative
 implementation of the C standard library called Musl which is smaller
 but might behave differently from the more widely used GNU C
