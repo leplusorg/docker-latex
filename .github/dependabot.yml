@@ -25,7 +25,7 @@ updates:
     cooldown:
       default-days: 7
     commit-message:
-      prefix: chore(ci-deps)
+      prefix: ci(deps)
   - package-ecosystem: "github-actions"
     target-branch: "alpine"
     directory: "/"
@@ -34,4 +34,4 @@ updates:
     cooldown:
       default-days: 7
     commit-message:
-      prefix: chore(ci-deps)
+      prefix: ci(deps)
