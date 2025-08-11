@@ -3,7 +3,6 @@ version: 2
 updates:
   - package-ecosystem: "docker"
     directory: "/latex"
-    target-branch: "main"
     schedule:
       interval: "daily"
     commit-message:
@@ -18,7 +17,6 @@ updates:
     commit-message:
       prefix: build(deps)
   - package-ecosystem: "github-actions"
-    target-branch: "main"
     directory: "/"
     schedule:
       interval: "daily"
