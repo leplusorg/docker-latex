@@ -32,7 +32,7 @@ RUN apt-get update \
     texlive-bibtex-extra=2024.20250309-2 \
     texlive-lang-all=2024.20250309-1 \
     texlive-latex-extra=2024.20250309-2 \
-    texlive-science=2022.20230122-4 \
+    texlive-science=2024.20250309-2 \
     texlive=2024.20250309-1 \
     && IFS=$'\n\t' \
     && if apt-get -s upgrade | grep -q -e '^Inst ' ; then \
