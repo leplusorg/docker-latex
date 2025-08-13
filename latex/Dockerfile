@@ -29,7 +29,7 @@ RUN apt-get update \
     make=4.3-4.1 \
     python3=3.11.2-1+b1 \
     python3-pip=23.0.1+dfsg-1 \
-    texlive-bibtex-extra=2022.20230122-4 \
+    texlive-bibtex-extra=2024.20250309-2 \
     texlive-lang-all=2022.20230122-1 \
     texlive-latex-extra=2022.20230122-4 \
     texlive-science=2022.20230122-4 \
