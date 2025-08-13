@@ -24,7 +24,7 @@ RUN apt-get update \
     git=1:2.47.2-0.2 \
     lacheck=1.26-17.1 \
     latex-make=2.4.3-1 \
-    latex-mk=2.1-3 \
+    latex-mk=2.1-6 \
     latexmk=1:4.79-1 \
     make=4.3-4.1 \
     python3=3.11.2-1+b1 \
