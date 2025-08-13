@@ -25,7 +25,7 @@ RUN apt-get update \
     lacheck=1.26-17.1 \
     latex-make=2.4.3-1 \
     latex-mk=2.1-6 \
-    latexmk=1:4.79-1 \
+    latexmk=1:4.86~ds-1 \
     make=4.3-4.1 \
     python3=3.13.5-1 \
     python3-pip=23.0.1+dfsg-1 \
