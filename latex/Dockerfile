@@ -26,7 +26,7 @@ RUN apt-get update \
     latex-make=2.4.3-1 \
     latex-mk=2.1-3 \
     latexmk=1:4.79-1 \
-    make=4.3-4.1 \
+    make=4.4.1-2 \
     python3=3.11.2-1+b1 \
     python3-pip=23.0.1+dfsg-1 \
     texlive-bibtex-extra=2022.20230122-4 \
