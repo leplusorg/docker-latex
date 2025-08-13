@@ -31,7 +31,7 @@ RUN apt-get update \
     python3-pip=23.0.1+dfsg-1 \
     texlive-bibtex-extra=2022.20230122-4 \
     texlive-lang-all=2022.20230122-1 \
-    texlive-latex-extra=2022.20230122-4 \
+    texlive-latex-extra=2024.20250309-2 \
     texlive-science=2022.20230122-4 \
     texlive=2022.20230122-3 \
     && IFS=$'\n\t' \
