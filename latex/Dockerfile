@@ -19,7 +19,7 @@ RUN apt-get update \
     adduser=3.152 \
     biber=2.20-2 \
     chktex=1.7.9-1 \
-    curl=7.88.1-10+deb12u12 \
+    curl=8.14.1-2 \
     ghostscript=10.05.1~dfsg-1 \
     git=1:2.39.5-0+deb12u2 \
     lacheck=1.26-17 \
