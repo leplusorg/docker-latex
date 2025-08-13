@@ -33,7 +33,7 @@ RUN apt-get update \
     texlive-lang-all=2022.20230122-1 \
     texlive-latex-extra=2022.20230122-4 \
     texlive-science=2022.20230122-4 \
-    texlive=2022.20230122-3 \
+    texlive=2024.20250309-1 \
     && IFS=$'\n\t' \
     && if apt-get -s upgrade | grep -q -e '^Inst ' ; then \
       apt-get -s upgrade | grep -e '^Inst ' ; \
