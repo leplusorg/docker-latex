@@ -17,8 +17,10 @@ if [ -f .bump.csv.bak ]; then
 		\perl -i -p -e "s|\Q${l1}\E|${l2}|g" Dockerfile
 		\git add Dockerfile
 		\git commit -S -m "build(deps): bump ${p} from ${v1} to ${v2}"
-		echo "Please review and push commit in branch \"${b}\". Waiting 10s..."
-		\sleep 10
+		echo "Please review and push commit in branch \"${b}\". Waiting..."
+		while \git status | \grep -Fq "Your branch is ahead" ; do
+			\sleep 1
+		done
 		\gh pr create -f -l build -l dependencies
 		\git checkout -
 	done <<<"${csv}"
