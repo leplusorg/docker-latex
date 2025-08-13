@@ -20,7 +20,7 @@ RUN apt-get update \
     biber=2.20-2 \
     chktex=1.7.9-1 \
     curl=8.14.1-2 \
-    ghostscript=10.0.0~dfsg-11+deb12u7 \
+    ghostscript=10.05.1~dfsg-1 \
     git=1:2.39.5-0+deb12u2 \
     lacheck=1.26-17 \
     latex-make=2.4.3-1 \
