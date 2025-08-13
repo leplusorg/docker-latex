@@ -12,7 +12,7 @@ if [ -f .bump.csv.bak ]; then
 	csv="$(\cat .bump.csv.bak)"
 	\rm -f .bump.csv.bak
 	while IFS="," read -r p v1 v2 l1 l2; do
-		b="${p}-${v2/~/-}"
+		b="${p}-${v2/\~/-}"
 		\git switch --create "${b}"
 		\perl -i -p -e "s|\Q${l1}\E|${l2}|g" Dockerfile
 		\git add Dockerfile
