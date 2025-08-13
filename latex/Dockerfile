@@ -17,8 +17,8 @@ RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get install --no-install-recommends -y \
     adduser=3.152 \
-    biber=2.18-1 \
-    chktex=1.7.8-1 \
+    biber=2.20-2 \
+    chktex=1.7.9-1 \
     curl=8.14.1-2 \
     ghostscript=10.0.0~dfsg-11+deb12u7 \
     git=1:2.39.5-0+deb12u2 \
