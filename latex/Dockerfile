@@ -22,7 +22,7 @@ RUN apt-get update \
     curl=7.88.1-10+deb12u12 \
     ghostscript=10.0.0~dfsg-11+deb12u7 \
     git=1:2.39.5-0+deb12u2 \
-    lacheck=1.26-17 \
+    lacheck=1.26-17.1 \
     latex-make=2.4.3-1 \
     latex-mk=2.1-3 \
     latexmk=1:4.79-1 \
