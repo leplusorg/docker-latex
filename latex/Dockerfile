@@ -16,7 +16,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get install --no-install-recommends -y \
-    adduser=3.134 \
+    adduser=3.152 \
     biber=2.18-1 \
     chktex=1.7.8-1 \
     curl=7.88.1-10+deb12u12 \
