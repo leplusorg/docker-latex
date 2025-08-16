@@ -4,4 +4,25 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: "sh -c '[ $$(id -u) -eq 1000 ] && latexmk --version'"
+    command: |
+      sh -c '
+        set -euo pipefail
+        if [ $(id -u) -ne 1000 ]; then
+          exit 1
+        fi
+        base64 --version # coreutils
+        biber --version # biber
+        chktex --version # chktex
+        curl --version # curl
+        dvips --version # texlive
+        git --version # git
+        gs --version # ghostscript
+        lacheck --version # lacheck
+        latex-make --version # latex-make
+        latex-mk --version # latex-mk
+        latexmk --version # latexmk
+        make --version # make
+        pdftex --version # texlive
+        pip --version # py3-pip
+        python --version # python3
+      '
