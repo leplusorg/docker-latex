@@ -14,6 +14,7 @@ SHELL ["/bin/ash", "-euo", "pipefail", "-c"]
 # hadolint ignore=DL3019
 RUN apk -U upgrade \
     && apk add \
+    # FIXME biber=2.21-r0 \
     coreutils=9.7-r1 \
     curl=8.14.1-r1 \
     git=2.49.1-r0 \
