@@ -17,8 +17,7 @@ services:
         dvips --version # texlive
         git --version # git
         gs --version # ghostscript
-        lacheck --version # lacheck
-        latex-make --version # latex-make
+        LaTeX.mk --version # latex-make
         latex-mk --version # latex-mk
         latexmk --version # latexmk
         make --version # make
