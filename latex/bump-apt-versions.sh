@@ -3,12 +3,13 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-cd "$(\dirname "$0")"
+cd "$(\dirname "${0}")"
 
 if [ -f /.dockerenv ]; then
 
 	\apt-get update
 
+	\rm -f .bump.csv.bak
 	\sed -e :a -e '/\\$/N; s/\\\n//; ta' Dockerfile | \grep -o -e 'apt-get[^\&\;]*install[^\&\;]*' | \grep -o -e '[^ ]*\=[^ ]*' | while IFS= read -r l; do
 		p="${l%=*}"
 		v1="${l#*=}"

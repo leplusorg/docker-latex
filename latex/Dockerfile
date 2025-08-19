@@ -15,14 +15,20 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update \
     && apt-get upgrade -y \
+    # FIXME @TL workaround for amd64 vs arm64 versions
+    && if [ "$(\uname -m)" = 'aarch64' ]; then \
+      SUFFIX='+b1' ; \
+    else \
+      SUFFIX='' ; \
+    fi \
     && apt-get install --no-install-recommends -y \
     adduser=3.152 \
     biber=2.20-2 \
-    chktex=1.7.9-1 \
+    chktex=1.7.9-1${SUFFIX} \
     curl=8.14.1-2 \
     ghostscript=10.05.1~dfsg-1 \
     git=1:2.47.2-0.2 \
-    lacheck=1.26-17.1 \
+    lacheck=1.26-17.1${SUFFIX} \
     latex-make=2.4.3-1 \
     latex-mk=2.1-6 \
     latexmk=1:4.86~ds-1 \
