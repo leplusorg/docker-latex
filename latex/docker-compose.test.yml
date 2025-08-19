@@ -22,5 +22,5 @@ services:
         make --version # make
         pdftex --version # texlive
         pip --version # py3-pip
-        python --version # python3
+        python3 --version # python3
       '
