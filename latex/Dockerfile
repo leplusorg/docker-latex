@@ -18,6 +18,8 @@ RUN apt-get update \
     # FIXME @TL workaround for amd64 vs arm64 versions
     && if [ "$(\uname -m)" = 'aarch64' ]; then \
       SUFFIX='+b1' ; \
+    else \
+      SUFFIX='' ; \
     fi \
     && apt-get install --no-install-recommends -y \
     adduser=3.152 \
