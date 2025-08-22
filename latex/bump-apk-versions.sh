@@ -31,7 +31,7 @@ if [ -f /.dockerenv ]; then
 
 else
 
-	\docker run --pull always --rm -t --user root -v "$(pwd):/opt/bump" "leplusorg/${PWD##*/}:main" /opt/bump/"$(\basename "${0}")"
+	\docker run --pull always --rm -t --user root -v "$(pwd):/opt/bump" "leplusorg/${PWD##*/}:alpine" /opt/bump/"$(\basename "${0}")"
 
 	./create-bump-prs.sh
 
