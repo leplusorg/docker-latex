@@ -40,9 +40,6 @@ RUN apt-get update \
     texlive-latex-extra=2024.20250309-2 \
     texlive-science=2024.20250309-2 \
     texlive=2024.20250309-1 \
-    && if apt-get -s upgrade | tee -a /dev/stderr | grep -q -e '^Inst ' ; then \
-      exit 1 ; \
-    fi \
     # Removing documentation packages *after* installing them is kind of hacky,
     # but it only adds some overhead while building the image.
     && apt-get --purge remove -y .\*-doc$ \
