@@ -109,4 +109,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         with:
+          name: ${{ env.VERSION }}
           tag_name: v${{ env.VERSION }}
+          generate_release_notes: true
+          make_latest: false
