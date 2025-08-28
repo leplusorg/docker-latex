@@ -12,8 +12,8 @@ ARG USER_GECOS=LaTeX
 SHELL ["/bin/ash", "-euo", "pipefail", "-c"]
 
 # hadolint ignore=DL3019
-RUN apk -U upgrade \
-    && apk add \
+RUN apk upgrade --no-cache \
+    && apk add --no-cache \
     # FIXME biber=2.21-r0 \
     coreutils=9.7-r1 \
     curl=8.14.1-r1 \
@@ -22,7 +22,7 @@ RUN apk -U upgrade \
     py3-pip=25.1.1-r0 \
     python3=3.12.11-r0 \
     texlive-full=20240210.69778-r10 \
-    && apk cache clean \
+    && apk cache --no-cache clean \
     && rm -rf /var/cache/apk/*
 
 RUN adduser \
