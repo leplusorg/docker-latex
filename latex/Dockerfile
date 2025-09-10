@@ -11,7 +11,6 @@ ARG USER_GECOS=LaTeX
 
 SHELL ["/bin/ash", "-euo", "pipefail", "-c"]
 
-# hadolint ignore=DL3019
 RUN apk upgrade --no-cache \
     && apk add --no-cache \
     # FIXME biber=2.21-r0 \
