@@ -11,6 +11,7 @@ services:
         if [ $$(id -u) -ne 1000 ]; then
           exit 1
         fi
+        aspell --version # aspell
         base64 --version # coreutils
         # FIXME biber --version # biber
         chktex --version # chktex
