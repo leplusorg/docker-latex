@@ -13,6 +13,11 @@ SHELL ["/bin/ash", "-euo", "pipefail", "-c"]
 
 RUN apk upgrade --no-cache \
     && apk add --no-cache \
+    aspell=0.60.8.1-r0 \
+    aspell-en=2020.12.07-r0 \
+    aspell-fr=0.50.3-r0 \
+    aspell-ru=0.99_p7-r2 \
+    aspell-uk=1.4.0-r3 \
     # FIXME biber=2.21-r0 \
     coreutils=9.7-r1 \
     curl=8.14.1-r1 \
