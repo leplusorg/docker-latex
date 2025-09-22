@@ -22,6 +22,7 @@ services:
         lacheck --version # lacheck
         latexmk --version # latexmk
         make --version # make
+        pandoc --version # pandoc
         pdftex --version # texlive
         pip --version # py3-pip
         python --version # python3
