@@ -25,7 +25,7 @@ RUN apk upgrade --no-cache \
     make=4.4.1-r3 \
     pandoc-cli=3.6.4-r0 \
     py3-pip=25.1.1-r0 \
-    python3=3.12.11-r0 \
+    python3=3.12.12-r0 \
     texlive-full=20240210.69778-r10 \
     && apk cache --no-cache clean \
     && rm -rf /var/cache/apk/*
