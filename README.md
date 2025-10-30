@@ -124,3 +124,19 @@ For instructions on how to install `cosign`, please read this [documentation](ht
 ## Request new tool
 
 Please use [this link](https://github.com/leplusorg/docker-latex/issues/new?assignees=thomasleplus&labels=enhancement&template=feature_request.md&title=%5BFEAT%5D) (GitHub account required) to request that a new tool be added to the image. I am always interested in adding new capabilities to these images.
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+## Security
+
+Please read [SECURITY.md](SECURITY.md) for details on our security policy and how to report security vulnerabilities.
+
+## Code of Conduct
+
+Please read [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for details on our code of conduct.
+
+## License
+
+This project is licensed under the terms of the [LICENSE](LICENSE) file.
