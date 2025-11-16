@@ -82,7 +82,7 @@ RUN apt-get update \
     aspell=0.60.8.1-4 \
     biber=2.20-2 \
     chktex=1.7.9-1${SUFFIX} \
-    curl=8.14.1-2 \
+    curl=8.14.1-2+deb13u2 \
     ghostscript=10.05.1~dfsg-1+deb13u1 \
     git=1:2.47.3-0+deb13u1 \
     lacheck=1.26-17.1${SUFFIX} \
