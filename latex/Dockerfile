@@ -91,7 +91,6 @@ RUN apt-get update \
     latexmk=1:4.86~ds-1 \
     make=4.4.1-2 \
     pandoc=3.1.11.1+ds-2 \
-    pandoc-citeproc=3.1.11.1+ds-2 \
     python3=3.13.5-1 \
     python3-pip=25.1.1+dfsg-1 \
     texlive-full=2024.20250309-1 \
