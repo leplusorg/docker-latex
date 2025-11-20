@@ -26,6 +26,13 @@ jobs:
           set -euo pipefail
           IFS=$'\n\t'	
           echo "IMAGE=${GITHUB_REPOSITORY#*/docker-}" >> "${GITHUB_ENV}"
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet # not using .NET
+          sudo rm -rf /usr/local/lib/android # not building Android
+          sudo rm -rf /opt/ghc # not using Haskell
+          docker system prune -af --volumes
+          sudo apt-get clean
       - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
           persist-credentials: false
