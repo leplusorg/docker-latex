@@ -91,13 +91,11 @@ RUN apt-get update \
     latexmk=1:4.86~ds-1 \
     make=4.4.1-2 \
     pandoc=3.1.11.1+ds-2 \
+    pandoc-citeproc=3.1.11.1+ds-2 \
     python3=3.13.5-1 \
     python3-pip=25.1.1+dfsg-1 \
-    texlive-bibtex-extra=2024.20250309-2 \
+    texlive-full=2024.20250309-1 \
     texlive-lang-all=2024.20250309-1 \
-    texlive-latex-extra=2024.20250309-2 \
-    texlive-science=2024.20250309-2 \
-    texlive=2024.20250309-1 \
     # Removing documentation packages *after* installing them is kind of hacky,
     # but it only adds some overhead while building the image.
     && apt-get --purge remove -y .\*-doc$ \
