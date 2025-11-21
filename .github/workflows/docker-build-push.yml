@@ -10,6 +10,9 @@ on:
 
 permissions: {}
 
+env:
+  DOCKER_BUILDKIT: 1
+
 jobs:
   docker-build-push:
     if: ${{ ! startsWith(github.ref, 'refs/tags/') }}
