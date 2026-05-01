@@ -85,7 +85,7 @@ RUN apt-get update \
     curl=8.14.1-2+deb13u2 \
     ghostscript=10.05.1~dfsg-1+deb13u1 \
     git=1:2.47.3-0+deb13u1 \
-    lacheck=1.26-17.1${SUFFIX} \
+    lacheck=1.26-17.1+b1${SUFFIX} \
     latex-make=2.4.3-1 \
     latex-mk=2.1-6 \
     latexmk=1:4.86~ds-1 \
