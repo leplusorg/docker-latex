@@ -7,7 +7,7 @@ A convenient way to run LaTeX on a multi-platform Docker container (`texlive`, `
 [![Docker Stars](https://img.shields.io/docker/stars/leplusorg/latex)](https://hub.docker.com/r/leplusorg/latex)
 [![Docker Pulls](https://img.shields.io/docker/pulls/leplusorg/latex)](https://hub.docker.com/r/leplusorg/latex)
 [![Docker Version](https://img.shields.io/docker/v/leplusorg/latex?sort=semver)](https://hub.docker.com/r/leplusorg/latex)
-[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/10068/badge)](https://bestpractices.coreinfrastructure.org/projects/10068)
+[![OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/projects/10068/badge)](https://bestpractices.coreinfrastructure.org/projects/10068)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/leplusorg/docker-latex/badge)](https://securityscorecards.dev/viewer/?uri=github.com/leplusorg/docker-latex)
 
 ## Example
