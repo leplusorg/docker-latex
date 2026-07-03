@@ -20,7 +20,7 @@ RUN apk upgrade --no-cache \
     aspell-uk=1.4.0-r3 \
     # FIXME biber=2.21-r0 \
     coreutils=9.11-r0 \
-    curl=8.20.0-r1 \
+    curl=8.21.0-r0 \
     git=2.54.0-r0 \
     make=4.4.1-r4 \
     pandoc-cli=3.10-r0 \
