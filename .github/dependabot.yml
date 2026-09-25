@@ -26,6 +26,10 @@ updates:
       default-days: 7
     commit-message:
       prefix: ci(deps)
+    groups:
+      codeql:
+        patterns:
+          - "github/codeql-action*"
   - package-ecosystem: "github-actions"
     target-branch: "alpine"
     directory: "/"
@@ -35,3 +39,7 @@ updates:
       default-days: 7
     commit-message:
       prefix: ci(deps)
+    groups:
+      codeql:
+        patterns:
+          - "github/codeql-action*"
