@@ -21,7 +21,7 @@ RUN apk upgrade --no-cache \
     # FIXME biber=2.21-r0 \
     coreutils=9.11-r0 \
     curl=8.23.0-r0 \
-    git=2.54.0-r0 \
+    git=2.54.1-r0 \
     make=4.4.1-r4 \
     pandoc-cli=3.10-r0 \
     py3-pip=26.1.2-r0 \
